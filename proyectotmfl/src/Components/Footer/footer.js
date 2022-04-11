@@ -4,7 +4,7 @@ import "../Footer/footer.css"
 function Footer() {
     return (
     <footer>
-        <ul className="team">
+        <ul className="squad">
             <li>Franco Leone</li>
             <li>Timoteo Masic</li>
         </ul>

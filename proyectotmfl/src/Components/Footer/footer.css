@@ -1,0 +1,10 @@
+.squad{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 40%;
+    padding-right: 40%;
+    background-color: #707070;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 20px;
+}
