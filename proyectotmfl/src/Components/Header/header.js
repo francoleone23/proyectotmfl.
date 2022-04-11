@@ -5,7 +5,7 @@ import "../Header/header.css"
 function Header() {
     return (
     <header>
-        <h1>Proyecto Integrador Franco Leone & Timoteo Masic. </h1>
+        <h1>Proyecto Integrador Franco Leone y Timoteo Masic. </h1>
         <section>
             <p>Ordenar ASC/ DESC</p>
             <i className="fas fa-th"></i>
