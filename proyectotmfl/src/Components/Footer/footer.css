@@ -1,7 +1,6 @@
 .squad{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
     padding-left: 40%;
     padding-right: 40%;
     background-color: #707070;
