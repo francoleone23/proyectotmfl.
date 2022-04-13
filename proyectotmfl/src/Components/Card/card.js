@@ -1,20 +1,6 @@
 import React from "react";
 import "../Main/main.css"
 
-class Card extends Component {
-    constructor(props){
-      super(props)
-      this.state = {
-        datos: [],
-        ver: 'más',
-        viewMore: false,
-        navego: false
-      }
-    }
-}
-
-
-
 function Card() {
     return (
             <article>
