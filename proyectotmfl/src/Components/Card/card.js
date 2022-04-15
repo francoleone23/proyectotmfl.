@@ -11,28 +11,6 @@ class Card extends Component {
             navego: false
           }
         }
-      
-        clickme(){
-          if(this.state.ver === 'más'){
-          this.setState({ver: 'menos', viewMore: true})
-        } else {
-          this.setState(
-            {
-              ver: 'más',
-              viewMore: false
-            }
-          )
-        }
-      }
-      
-      
-      MouseOver(){
-        if(this.state.navigate === true){
-          this.setState({navigate: false})
-        } else {
-          this.setState({navigate: true})
-        }
-      }
 
     render(){
         return (
