@@ -1,7 +1,5 @@
 .tituliño {
     display: flex;
     justify-content: space-around;
-}
-.tituliño.img {
-    height: 10vmin;
+    background-color: black;
 }

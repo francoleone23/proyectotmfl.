@@ -1,8 +1,41 @@
-import React from "react";
+import React, { Component } from "react";
 import "../Main/main.css"
 
-function Card() {
-    return (
+class Card extends Component {
+        constructor(props){
+          super(props)
+          this.state = {
+            datos: [],
+            ver: 'más',
+            viewMore: false,
+            navego: false
+          }
+        }
+      
+        clickme(){
+          if(this.state.ver === 'más'){
+          this.setState({ver: 'menos', viewMore: true})
+        } else {
+          this.setState(
+            {
+              ver: 'más',
+              viewMore: false
+            }
+          )
+        }
+      }
+      
+      
+      MouseOver(){
+        if(this.state.navigate === true){
+          this.setState({navigate: false})
+        } else {
+          this.setState({navigate: true})
+        }
+      }
+
+    render(){
+        return (
             <article>
                 <section className="navigation">
                     <div>
@@ -13,7 +46,7 @@ function Card() {
                 </section>
                 <main>
                     <img src="./img/image-default.png" alt=""/>
-                    <h3>Título/ Nombre</h3>
+                    <h3>Título/ Nombreeeee</h3>
                     <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
                     <section className="aditional-info">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
@@ -24,6 +57,8 @@ function Card() {
                 </main>
             </article>
     );
+    }
+    
 }
 
 export default Card;

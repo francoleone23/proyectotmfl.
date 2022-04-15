@@ -5,7 +5,7 @@ function Header (){
   return (
 
   <div className="tituliño">
-    <img src="/images/logodelproy.jpeg" alt="pelipedia PA"></img>
+    <img src="/images/logodelproy.jpeg" width = "300" height = "300" alt="pelipedia PA"></img>
 </div>
 
   );
