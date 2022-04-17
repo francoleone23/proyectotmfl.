@@ -17,7 +17,7 @@ class Main extends Component {
     
   
     componentDidMount(){
-      fetch('https://api.themoviedb.org/3/movie/popular?api_key=e359a4e964c9e009d51477293d96e9859&language=en-US&page=1')
+      fetch('https://api.themoviedb.org/3/movie/popular?api_key=e359a4e964c9e009d51477293d96e985&language=en-US&page=1')
       .then(response => response.json())
       .then( data => this.setState(
         {
@@ -48,7 +48,7 @@ class Main extends Component {
   
   }
   render(){
-    console.log(this.state.personajes);
+    console.log(this.state.datos);
     return(
       <h1>Aca deberian ir las cards con el fetch y su info</h1>  
     )
