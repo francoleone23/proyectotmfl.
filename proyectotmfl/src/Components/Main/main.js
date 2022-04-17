@@ -50,7 +50,7 @@ class Main extends Component {
   render(){
     console.log(this.state.personajes);
     return(
-        SafeArray//lo puse de gede no significa nada 
+      <h1>Aca deberian ir las cards con el fetch y su info</h1>  
     )
 }
 

@@ -9,7 +9,7 @@ function App() {
     <div>
  <Header/>
  <main> 
-       <Card/>
+       <Main/>
  </main>
        <Footer/>
    </div>

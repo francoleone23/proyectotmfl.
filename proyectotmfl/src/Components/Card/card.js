@@ -24,7 +24,7 @@ class Card extends Component {
                 </section>
                 <main>
                     <img src="./img/image-default.png" alt=""/>
-                    <h3>Título/ Nombreeeee</h3>
+                    <h3>Título</h3>
                     <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
                     <section className="aditional-info">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
