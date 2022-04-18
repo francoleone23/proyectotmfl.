@@ -33,7 +33,7 @@ class Main extends Component {
       .then(response => response.json())
       .then( data => {
           console.log(data.results);
-          this.setState({peliculasResultado: this.state.peliculasResultado.concat(data.results), nextUrl: data.page + 1, datos: this.state.datos.concat(data.results)})
+          this.setState({peliculasResultado: this.state.peliculasResultado.concat(data.results), nextUrl: data.page + 1, datos: this.state.datos.concat(data.results)}) //merge 2 or more arrays
       })
       .catch(error=> console.log(error))
   }
@@ -45,10 +45,26 @@ class Main extends Component {
     this.setState({peliculasResultado: peliculasQueQuedan, datos: peliculasQueDejamos})
   
   }
+
+Filas(){
+    this.setState({filas: true})
+  }
+  
+Columnas(){
+    this.setState({filas: false})
+  }  //despues hay que agregar unos iconitos para que se pueda cambiar de filas a columnas 
+
+
   render(){
     console.log(this.state.peliculasResultado);
     return(
-      <h1>Aca deberian ir las cards con el fetch y su info</h1>
+      <section>
+          {this.state.peliculasResultado.length === 0 ?
+              <p>Cargando...</p>:
+              <p>tush</p>
+
+            }
+      </section>
       
     )
 }
