@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import "../Search/buscador.css"
 
-class Formulario extends Component {
+class Buscador extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
@@ -33,4 +33,4 @@ class Formulario extends Component {
 
 }
 
-export default Formulario;
+export default Buscador;

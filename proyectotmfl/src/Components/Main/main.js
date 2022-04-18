@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Card from "../Card/card";
 import "../Main/main.css"
+import Buscador from "../Search/buscador";
 
 class Main extends Component {
     constructor(props){
