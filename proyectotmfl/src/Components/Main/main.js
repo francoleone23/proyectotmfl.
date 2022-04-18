@@ -6,9 +6,8 @@ class Main extends Component {
     constructor(props){
       super(props)
       this.state = {
-        datos: [],
         isLoaded: false,
-        nextUrl: "",
+        nextUrl: "", //actualizar la url de la siguiente página de resultados m
         filas: true,
         peliculasResultado: [],
       }
@@ -21,7 +20,6 @@ class Main extends Component {
       .then(response => response.json())
       .then( data => this.setState(
         {
-          datos: data.results,
           peliculasResultado: data.results,
           isLoaded: true,
           nextUrl: data.page + 1,
@@ -48,9 +46,10 @@ class Main extends Component {
   
   }
   render(){
-    console.log(this.state.datos);
+    console.log(this.state.peliculasResultado);
     return(
-      <h1>Aca deberian ir las cards con el fetch y su info</h1>  
+      <h1>Aca deberian ir las cards con el fetch y su info</h1>
+      
     )
 }
 
