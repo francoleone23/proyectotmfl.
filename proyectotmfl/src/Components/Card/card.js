@@ -22,7 +22,7 @@ class Card extends Component {
                         <i className="fas fa-chevron-left"></i>
                         <i className="fas fa-chevron-right"></i>
                     </div>
-                    <p onClick={()=>this.props.borrarPelicula(this.props.dataPelicula.id)}>Borrar</p>
+                    <button onClick={()=>this.props.borrarPelicula(this.props.dataPelicula.id)}>Borrar</button>
                 </section>
                 <main>
                     <img src={this.props.dataPelicula.poster_path} alt={this.props.dataPelicula.title}/>
