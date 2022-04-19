@@ -39,13 +39,13 @@ class Main extends Component {
       .catch(error=> console.log(error))
   }
   
-  delete(peliculaABorrar){
-    let peliculasQueQuedan = this.state.peliculasResultado.filter( pelicula => pelicula.id !== peliculaABorrar)
-    let peliculasQueDejamos = this.state.datos.filter( pelicula => pelicula.id !== peliculaABorrar)
+  //delete(peliculaABorrar){
+    //let peliculasQueQuedan = this.state.peliculasResultado.filter( pelicula => pelicula.id !== peliculaABorrar)
+    //let peliculasQueDejamos = this.state.datos.filter( pelicula => pelicula.id !== peliculaABorrar)
   
-    this.setState({peliculasResultado: peliculasQueQuedan, datos: peliculasQueDejamos})
+    //this.setState({peliculasResultado: peliculasQueQuedan, datos: peliculasQueDejamos})
   
-  }
+  //}
 
   borrar(id){
     let peliculasFiltradas = [];
@@ -63,6 +63,15 @@ Filas(){
 Columnas(){
     this.setState({filas: false})
   }  //despues hay que agregar unos iconitos para que se pueda cambiar de filas a columnas 
+
+  
+  
+  filtrarPeliculas(porTexto){
+    let peliBuscada = this.state.datos.filter(unaPelicula => unaPelicula.title.toLowerCase().includes(porTexto.toLowerCase()))
+    
+    this.setState({peliculasFiltradas: peliBuscada})
+}
+
 
 
   render(){
