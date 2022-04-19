@@ -47,6 +47,15 @@ class Main extends Component {
   
   }
 
+  borrar(id){
+    let peliculasFiltradas = [];
+    peliculasFiltradas = this.state.peliculasResultado.filter(unaPelicula => unaPelicula.id !== id);
+
+    this.setState({
+      peliculas: peliculasFiltradas
+    })
+  }
+
 Filas(){
     this.setState({filas: true})
   }
@@ -62,7 +71,7 @@ Columnas(){
       <section>
           {this.state.peliculasResultado.length === 0 ?
               <p>Cargando...</p>:
-              <p>tush</p>
+              this.state.peliculasResultado.map( (pelicula, idx) => <Card key={pelicula.title + idx} dataPelicula={pelicula} borrarPelicula={(id)=>this.borrar(id)}/>)
 
             }
       </section>

@@ -5,13 +5,16 @@ import Footer from "./Components/Footer/footer";
 import Main from './Components/Main/main';
 
 function App() {
+  
+  let peliculasItems = []
+  
   return (
     <div>
- <Header/>
- <main> 
-       <Main/>
- </main>
-       <Footer/>
+      <Header/>
+        <main> 
+          <Main/>
+        </main>
+      <Footer/>
    </div>
  );
 
