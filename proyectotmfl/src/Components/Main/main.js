@@ -77,14 +77,16 @@ Columnas(){
   render(){
     console.log(this.state.peliculasResultado);
     return(
-      <section>
+        <React.Fragment>
+            <Buscador filter = {(porTexto) => this.filtrarPeliculas(porTexto)}/>
+     <section>
           {this.state.peliculasResultado.length === 0 ?
               <p>Cargando...</p>:
               this.state.peliculasResultado.map( (pelicula, idx) => <Card key={pelicula.title + idx} dataPelicula={pelicula} borrarPelicula={(id)=>this.borrar(id)}/>)
 
             }
       </section>
-      
+      </React.Fragment>
     )
 }
 
