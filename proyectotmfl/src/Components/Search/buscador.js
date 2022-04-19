@@ -14,9 +14,9 @@ class Buscador extends Component {
 		event.preventDefault();
 	}
 
-	getDatos(datos){
+	getDatos(evento){
 		this.setState({
-			value: datos.target.value
+			value: evento.target.value
 		},
 		()=> this.props.filter(this.state.value)
 		)

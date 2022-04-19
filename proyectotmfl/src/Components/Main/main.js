@@ -24,6 +24,7 @@ class Main extends Component {
           peliculasResultado: data.results,
           isLoaded: true,
           nextUrl: data.page + 1,
+          datos: data.results,
         }
       ) )
       .catch( error => console.log(error) )
@@ -34,7 +35,10 @@ class Main extends Component {
       .then(response => response.json())
       .then( data => {
           console.log(data.results);
-          this.setState({peliculasResultado: this.state.peliculasResultado.concat(data.results), nextUrl: data.page + 1, datos: this.state.datos.concat(data.results)}) //merge 2 or more arrays
+          this.setState({
+              peliculasResultado: this.state.peliculasResultado.concat(data.results),
+              nextUrl: data.page + 1, datos: this.state.datos.concat(data.results)}) //merge 2 or more arrays
+              
       })
       .catch(error=> console.log(error))
   }
@@ -69,7 +73,8 @@ Columnas(){
   filtrarPeliculas(porTexto){
     let peliBuscada = this.state.datos.filter(unaPelicula => unaPelicula.title.toLowerCase().includes(porTexto.toLowerCase()))
     
-    this.setState({peliculasFiltradas: peliBuscada})
+    
+    this.setState({peliculasResultado: peliBuscada})
 }
 
 
