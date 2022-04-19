@@ -84,7 +84,6 @@ Columnas(){
     return(
         <React.Fragment>
             <Buscador filter = {(porTexto) => this.filtrarPeliculas(porTexto)}/>
-            <button type="button" onClick={()=>this.pedirMas()}>Pedir más</button>
      <section>
           {this.state.peliculasResultado.length === 0 ?
               <p>Cargando...</p>:
@@ -92,6 +91,7 @@ Columnas(){
 
             }
       </section>
+      <button type="button" onClick={()=>this.pedirMas()}>Pedir más</button>
       </React.Fragment>
     )
 }
