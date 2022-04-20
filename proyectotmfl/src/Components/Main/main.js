@@ -38,7 +38,7 @@ class Main extends Component {
           console.log(data.results);
           this.setState({
               peliculasResultado: this.state.peliculasResultado.concat(data.results),
-              nextUrl: data.page + 1, datos: this.state.datos.concat(data.results)}) //merge 2 or more arrays
+              nextUrl: data.page + 1, datos: this.state.peliculasResultado.concat(data.results)}) //merge 2 or more arrays
               
       })
       .catch(error=> console.log(error))
