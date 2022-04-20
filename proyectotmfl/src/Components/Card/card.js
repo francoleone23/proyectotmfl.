@@ -6,7 +6,7 @@ class Card extends Component {
           super(props)
           this.state = {
             datos: [],
-            ver: 'más',
+            text: 'Ver más',
             viewMore: false,
             navego: false
           }
@@ -28,7 +28,12 @@ class Card extends Component {
                     <img src={this.props.dataPelicula.poster_path} alt={this.props.dataPelicula.title}/>
                     <h3>{this.props.dataPelicula.title}</h3>
                     <p className="description">{this.props.dataPelicula.overview}</p>
-                    <a href="">Ver más</a>
+                    <div className={this.state.descClassName}>
+                        <p className='masInfo'>Release Date: {this.props.dataPelicula.release_date}</p>
+                        <p className='masInfo'>Popularity: {this.props.dataPelicula.popularity} seconds</p>
+                        <p className='masInfo'>Original Language: {this.props.dataPelicula.original_langauge}</p>
+                    </div>
+                    <p className="descButton" onClick={()=> this.showDescription()}>{this.state.text}</p>
                 </main>
             </article>
     );

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Card from "../Card/card";
-import "../Main/main.css"
+import "../Main/main.css";
 import Buscador from "../Search/buscador";
 
 class Main extends Component {
@@ -75,6 +75,24 @@ Columnas(){
     
     
     this.setState({peliculasResultado: peliBuscada})
+}
+
+showDescription() {
+  if (!this.state.showing) {
+      this.setState({
+          text: "Ver menos",
+          showing: true,
+          descClassName: "show"
+      })
+  } else {
+      this.setState({
+          text: "Ver mas",
+          showing: false,
+          descClassName: "hidden"
+      })
+  }
+
+
 }
 
 
