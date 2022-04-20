@@ -71,26 +71,6 @@ Columnas(){
     this.setState({peliculasResultado: peliBuscada})
 }
 
-showDescription() {
-  if (!this.state.showing) {
-      this.setState({
-          text: "Ver menos",
-          showing: true,
-          descClassName: "show"
-      })
-  } else {
-      this.setState({
-          text: "Ver mas",
-          showing: false,
-          descClassName: "hidden"
-      })
-  }
-
-
-}
-
-
-
   render(){
     console.log(this.state.peliculasResultado);
     return(

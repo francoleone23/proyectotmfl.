@@ -12,6 +12,20 @@ class Card extends Component {
           }
         }
 
+    viewMore() {
+        if (this.state.viewMore) {
+            this.setState({
+                viewMore: false,
+                text: "Ver más"
+            });
+        } else {
+            this.setState({
+                viewMore: true,
+                text: "Ver menos"
+            })
+        }
+    }
+
     render(){
         console.log(this.props);
         
@@ -29,12 +43,7 @@ class Card extends Component {
                     <img src={this.props.dataPelicula.poster_path} alt={this.props.dataPelicula.title}/>
                     <h3>{this.props.dataPelicula.title}</h3>
                     <p className="description">{this.props.dataPelicula.overview}</p>
-                    <div className={this.state.descClassName}>
-                        <p className='masInfo'>Release Date: {this.props.dataPelicula.release_date}</p>
-                        <p className='masInfo'>Popularity: {this.props.dataPelicula.popularity} seconds</p>
-                        <p className='masInfo'>Original Language: {this.props.dataPelicula.original_langauge}</p>
-                    </div>
-                    <p className="descButton" onClick={()=> this.showDescription()}>{this.state.text}</p>
+                    <p className="descButton" onClick={()=> this.viewMore()}>{this.state.text}</p>
                 </main>
             </article>
     );
