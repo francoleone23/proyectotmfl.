@@ -11,6 +11,7 @@ class Main extends Component {
         nextUrl: "", //actualizar la url de la siguiente página de resultados m
         filas: true,
         peliculasResultado: [],
+        peliculas: []
       }
     }
   
@@ -24,7 +25,7 @@ class Main extends Component {
           peliculasResultado: data.results,
           isLoaded: true,
           nextUrl: data.page + 1,
-          datos: data.results,
+          peliculasResultado: data.results,
         }
       ) )
       .catch( error => console.log(error) )
@@ -42,22 +43,15 @@ class Main extends Component {
       })
       .catch(error=> console.log(error))
   }
-  
-  //delete(peliculaABorrar){
-    //let peliculasQueQuedan = this.state.peliculasResultado.filter( pelicula => pelicula.id !== peliculaABorrar)
-    //let peliculasQueDejamos = this.state.datos.filter( pelicula => pelicula.id !== peliculaABorrar)
-  
-    //this.setState({peliculasResultado: peliculasQueQuedan, datos: peliculasQueDejamos})
-  
-  //}
 
   borrar(id){
     let peliculasFiltradas = [];
-    peliculasFiltradas = this.state.peliculasResultado.filter(unaPelicula => unaPelicula.id !== id);
-
+    peliculasFiltradas = this.state.peliculas.filter( unaPelicula => unaPelicula.id !== id);
+   
     this.setState({
       peliculas: peliculasFiltradas
     })
+
   }
 
 Filas(){
@@ -105,7 +99,7 @@ showDescription() {
      <section>
           {this.state.peliculasResultado.length === 0 ?
               <p>Cargando...</p>:
-              this.state.peliculasResultado.map( (pelicula, idx) => <Card key={pelicula.title + idx} dataPelicula={pelicula} borrarPelicula={(id)=>this.borrar(id)}/>)
+              this.state.peliculasResultado.map( (pelicula, idx) => <Card key={pelicula.title + idx} dataPelicula={pelicula} borrarPelicula={ (id)=>this.borrar(id) }/>)
 
             }
       </section>

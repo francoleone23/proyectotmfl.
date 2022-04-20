@@ -15,6 +15,7 @@ class Card extends Component {
     render(){
         console.log(this.props);
         
+        
         return (
             <article>
                 <section className="navigation">
@@ -22,7 +23,7 @@ class Card extends Component {
                         <i className="fas fa-chevron-left"></i>
                         <i className="fas fa-chevron-right"></i>
                     </div>
-                    <button onClick={()=>this.props.borrarPelicula(this.props.dataPelicula.id)}>Borrar</button>
+                    <p onClick={()=>this.props.borrarPelicula(this.props.dataPelicula.id)}>Borrar</p>
                 </section>
                 <main>
                     <img src={this.props.dataPelicula.poster_path} alt={this.props.dataPelicula.title}/>
