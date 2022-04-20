@@ -46,10 +46,10 @@ class Main extends Component {
 
   borrar(id){
     let peliculasFiltradas = [];
-    peliculasFiltradas = this.state.peliculas.filter( unaPelicula => unaPelicula.id !== id);
+    peliculasFiltradas = this.state.peliculasResultado.filter( unaPelicula => unaPelicula.id !== id);
    
     this.setState({
-      peliculas: peliculasFiltradas
+      peliculasResultado: peliculasFiltradas
     })
 
   }
