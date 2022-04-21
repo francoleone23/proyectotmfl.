@@ -77,11 +77,13 @@ Columnas(){
         <React.Fragment>
             <Buscador filter = {(porTexto) => this.filtrarPeliculas(porTexto)}/>
      <section>
+     <ul className="cards">
           {this.state.peliculasResultado.length === 0 ?
               <p>Cargando...</p>:
               this.state.peliculasResultado.map( (pelicula, idx) => <Card key={pelicula.title + idx} dataPelicula={pelicula} borrarPelicula={ (id)=>this.borrar(id) }/>)
 
             }
+            </ul>
       </section>
       <button type="button" onClick={()=>this.pedirMas()}>Pedir más</button>
       </React.Fragment>

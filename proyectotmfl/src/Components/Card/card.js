@@ -32,18 +32,19 @@ class Card extends Component {
         
         
         return (
-            <article>
-                <section className="navigation">
-                    <div>
-                        <i className="fas fa-chevron-left"></i>
-                        <i className="fas fa-chevron-right"></i>
-                    </div>
-                    <button onClick={()=>this.props.borrarPelicula(this.props.dataPelicula.id)}>Borrar</button>
-                </section>
+            
+                
+                <li className="cards_item">
+                    <div className="card">
+                
                 <main>
-                    <img src={this.props.dataPelicula.poster_path} alt={this.props.dataPelicula.title}/>
+                    
+                    <img className="card_image" src={"https://image.tmdb.org/t/p/original/"+this.props.dataPelicula.poster_path+"?api_key=e359a4e964c9e009d51477293d96e985"} alt={this.props.dataPelicula.title}/>
+                    
+                    <div className="card_content">
                     <h3>{this.props.dataPelicula.title}</h3>
                     <p className="description">{this.props.dataPelicula.overview}</p>
+                    <button onClick={()=>this.props.borrarPelicula(this.props.dataPelicula.id)}>Borrar</button>
                     <section
                         className={`${
                             this.state.viewMore ? "aditional-info-show" : "aditional-info"
@@ -54,8 +55,12 @@ class Card extends Component {
                         <p>Popularidad: {this.props.dataPelicula.popularity}</p>
                     </section>
                     <p className="descButton" onClick={()=> this.viewMore()}>{this.state.text}</p>
+                    </div>
                 </main>
-            </article>
+                </div>
+                </li>
+                
+            
     );
     }
     
