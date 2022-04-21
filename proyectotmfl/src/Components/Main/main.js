@@ -25,7 +25,6 @@ class Main extends Component {
           peliculasResultado: data.results,
           isLoaded: true,
           nextUrl: data.page + 1,
-          peliculasResultado: data.results,
         }
       ) )
       .catch( error => console.log(error) )
@@ -65,10 +64,11 @@ Columnas(){
   
   
   filtrarPeliculas(porTexto){
-    let peliBuscada = this.state.datos.filter(unaPelicula => unaPelicula.title.toLowerCase().includes(porTexto.toLowerCase()))
+    let peliBuscada = this.state.peliculasResultado.filter(unaPelicula => unaPelicula.title.toLowerCase().includes(porTexto.toLowerCase()))
     
     
-    this.setState({peliculasResultado: peliBuscada})
+    this.setState({peliculasResultado: peliBuscada
+    })
 }
 
   render(){
