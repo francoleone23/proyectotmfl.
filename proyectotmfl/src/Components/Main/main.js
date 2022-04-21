@@ -11,7 +11,6 @@ class Main extends Component {
         nextUrl: "", //actualizar la url de la siguiente página de resultados m
         filas: true,
         peliculasResultado: [],
-        peliculas: []
       }
     }
   

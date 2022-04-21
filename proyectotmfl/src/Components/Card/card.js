@@ -6,14 +6,12 @@ class Card extends Component {
         constructor(props){
           super(props)
           this.state = {
-            datos: [],
             text: 'Ver más',
             viewMore: false,
-            navego: false
           }
         }
 
-    viewMore() {
+    extendCard() {
         if (this.state.viewMore) {
             this.setState({
                 viewMore: false,
@@ -28,7 +26,7 @@ class Card extends Component {
     }
 
     render(){
-        console.log(this.props);
+        
         
         
         return (
@@ -54,7 +52,7 @@ class Card extends Component {
                         <p>Estreno: {this.props.dataPelicula.release_date}</p>
                         <p>Popularidad: {this.props.dataPelicula.popularity}</p>
                     </section>
-                    <p className="descButton" onClick={()=> this.viewMore()}>{this.state.text}</p>
+                    <p className="descButton" onClick={()=> this.extendCard()}>{this.state.text}</p>
                     </div>
                 </main>
                 </div>
