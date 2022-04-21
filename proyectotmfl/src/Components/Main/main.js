@@ -61,6 +61,8 @@ Columnas(){
     this.setState({filas: false})
   }  //despues hay que agregar unos iconitos para que se pueda cambiar de filas a columnas 
 
+
+
   
   
   filtrarPeliculas(porTexto){

@@ -24,10 +24,12 @@ class Buscador extends Component {
 
 	render(){
 		return(
+			<div className="buscador">
 		<form onSubmit= {(event)=> this.notDefault(event)}>
 			<input type="text" name="search" id="" placeholder="Que peli queres?" onChange = {(dato) => this.getDatos(dato)} value={this.state.value}/>
 			<button type="submit"><i className="fas fa-search"></i></button>
 		</form>     
+		</div>
 		);
 	}
 
