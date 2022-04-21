@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../Main/main.css"
+import "../Card/card.css"
 
 class Card extends Component {
         constructor(props){
@@ -43,6 +44,15 @@ class Card extends Component {
                     <img src={this.props.dataPelicula.poster_path} alt={this.props.dataPelicula.title}/>
                     <h3>{this.props.dataPelicula.title}</h3>
                     <p className="description">{this.props.dataPelicula.overview}</p>
+                    <section
+                        className={`${
+                            this.state.viewMore ? "aditional-info-show" : "aditional-info"
+                        }`}
+                    >
+                        <p>Rating: {this.props.dataPelicula.vote_average}</p>
+                        <p>Estreno: {this.props.dataPelicula.release_date}</p>
+                        <p>Popularidad: {this.props.dataPelicula.popularity}</p>
+                    </section>
                     <p className="descButton" onClick={()=> this.viewMore()}>{this.state.text}</p>
                 </main>
             </article>
